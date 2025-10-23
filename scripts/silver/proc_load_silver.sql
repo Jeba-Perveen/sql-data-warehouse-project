@@ -1,7 +1,22 @@
+/*
+==============================================================================================================
+Store Procedure : Load silver layer (source -> silver)
+==============================================================================================================
+Script purpose:
+        This stored procedured performs the ETL process to populate the 'silver' schema tables from the 'bronze' schema.
+        it performs the following action:
+          - Truncates thr silver tables .
+          - insert transformed and cleansed data from bronze tables into silver tables.
 
+Parameters:
+    none.
+    this stored procedured does not accept any parameter or return any values.
 
+usage example:
+    exec silver.load_silver;
+==============================================================================================================
+*/
 
-exec silver.load_silver;
 
 create or alter procedure silver.load_silver as
 begin
